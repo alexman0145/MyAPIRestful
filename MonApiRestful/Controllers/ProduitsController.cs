@@ -10,6 +10,8 @@ using MonApiRestful.Modeles.ProduitSave;
 
 namespace MonApiRestful.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ProduitsController : Controller
     {
         private readonly MonApiDbContext _context;
