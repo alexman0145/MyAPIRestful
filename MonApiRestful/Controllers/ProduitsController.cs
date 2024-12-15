@@ -10,11 +10,11 @@ using MonApiRestful.Modeles.ProduitSave;
 
 namespace MonApiRestful.Controllers
 {
-    public class ProduitController : Controller
+    public class ProduitsController : Controller
     {
         private readonly MonApiDbContext _context;
 
-        public ProduitController(MonApiDbContext context)
+        public ProduitsController(MonApiDbContext context)
         {
             _context = context;
         }
@@ -40,6 +40,18 @@ namespace MonApiRestful.Controllers
             return produit;
         }
 
+        [HttpGet("search")]
+        public async Task<ActionResult<IEnumerable<Produit>>> SearchProduit([FromQuery]string? nom)
+        {
+            var query = _context.Produits.AsQueryable();
+            if (!string.IsNullOrEmpty(nom))
+            {
+                query = query.Where(p => p.Nom.Contains(nom));
+            }
+
+
+            return await query.ToListAsync();
+        }
 
 
         // POST: Produit/Create
