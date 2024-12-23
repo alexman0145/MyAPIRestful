@@ -21,7 +21,7 @@ constructor(private produitService: ProduitService) { }
 onSubmit() {
   this.produitService.addProduit(this.produit).subscribe({
   next: (response) => {
-    console.log('Produit créer abec succès',response);
+    console.log('Produit cr\éer avec succ\ès',response);
 
   },
   error: (error) => {
@@ -29,6 +29,10 @@ onSubmit() {
     }
   });
 
+}
+
+BackToList() {
+  window.history.back();
 }
 
 }

@@ -30,6 +30,10 @@ export class ProduitService {
     return this.http.put<Produit>(`${this.apiUrl}/${produit.id}`, produit);
   }
 
+  public deleteProduits(): Observable<Produit[]> {
+    return this.http.delete<Produit[]>(this.apiUrl);
+  }
+
   public deleteProduit(id: number): Observable<Produit> {
     return this.http.delete<Produit>(`${this.apiUrl}/${id}`);
   }

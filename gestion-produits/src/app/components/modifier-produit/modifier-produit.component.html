@@ -1,1 +1,26 @@
-<p>modifier-produit works!</p>
+<h2>Modifier Le produit</h2>
+<form (ngSubmit)="onSubmit()" #produitForm="ngForm">
+    <div>
+        <label for="nom">Nom du Produit:</label>
+        <input type="text" id="nom" required [(ngModel)]="produit.nom" name="nom" #nom="ngModel">
+        <div [hidden]="nom.valid || nom.pristine" class="error">
+            Le nom du produit est requis
+        </div>
+    </div>
+    <div>
+        <label for="prix">Prix:</label>
+        <input type="number" id="prix" required [(ngModel)]="produit.prix" name="prix" #prix="ngModel">
+        <div [hidden]="prix.valid || prix.pristine" class="error">
+            Le prix est requis
+        </div>
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="produit.description" name="description" #description="ngModel"></textarea>
+        <div [hidden]="description.valid || description.pristine" class="error">
+            La description est requise
+        </div>
+    </div>
+    <button type="submit" [disabled]="!produitForm.form.valid">Modifier</button>
+</form>
+<button (click)="backToList()">Retourner vers La Liste des Produits</button>
