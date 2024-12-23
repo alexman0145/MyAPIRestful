@@ -1,0 +1,12 @@
+<h2>Liste des produits</h2>
+<ul>
+  <li *ngFor="let produit of produits">
+    <h3>{{ produit.nom }} 
+        <button (click)="deleteProduit(produit.id)">Supprimer</button> 
+        <button (click)="editProduit(produit.id)">Modifier</button>
+    </h3>
+    <p>Description: {{ produit.description }}</p>
+    <p>Prix: {{ produit.prix }} €</p>
+    <button (click)="addProduit()">Ajouter un produit</button>
+  </li>
+</ul>
