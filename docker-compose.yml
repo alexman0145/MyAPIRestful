@@ -13,10 +13,4 @@ services:
     volumes:
       - "./rdmbs/mssql/data:/var/opt/mssql/data"
       - "./rdmbs/mssql/backup:/var/opt/mssql/backup"
-    networks:
-      - mybridge
- 
-networks:
-  mybridge:
-    driver: bridge
  
