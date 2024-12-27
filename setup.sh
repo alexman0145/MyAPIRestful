@@ -25,7 +25,7 @@ echo "Database setup complete."
 
 # Run tests in the .NET project
 echo "Running tests in TestProject2..."
-cd TestProject2
+cd MonapiTests
 dotnet test
 
 echo "All tasks completed successfully."
