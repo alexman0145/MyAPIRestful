@@ -4,7 +4,7 @@ Ceci est repos gérant une API pour la création de produits
 
 Dans ce repos vous pouvez utiliser :
 
-- Le projet back-end qui est de type Asp.Netcorerestful
+- Le projet back-end qui est de type Restful
 - Le projet front-end dont sont framework est gérer par angular
 - Une base de donné devra être créer, le fichier yml est à votre disposition
 
