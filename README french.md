@@ -20,4 +20,4 @@ Pour les utilisateur novice ou débutant il est recommandé de passé par la bra
 Conclusion :
 
 La branche manual permet d'executez manuellement les commandes nécessaire pour executez les deux projets steb-by-step il n'y as pas de script sur cette branche.
-Contrairement à la branche un script .sh permet de configurer les deux projets afin qu'il soit utilisable.
+Contrairement à la branche auto un script .sh permet de configurer les deux projets afin qu'il soit utilisable.
