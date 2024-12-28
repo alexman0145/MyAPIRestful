@@ -55,12 +55,12 @@ echo "Database setup complete."
 
 # Run tests in the .NET project
 echo "Running tests in TestProject2..."
-cd MonapiTests
+cd MonApiTests
 dotnet test
 
 echo "Installing npm pakages form to execute the angular project..."
 sleep 15
-cd /MyAPIRestful/gestion-produits
+cd /workspaces/MyAPIRestful/gestion-produits
 npm install -g @angular/cli
 npm install @angular/core
 
