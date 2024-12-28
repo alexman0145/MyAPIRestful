@@ -6,18 +6,21 @@ import { AppComponent } from './app.component';
 import { ListeProduitsComponent } from './components/liste-produits/liste-produits.component';
 import { AjouterProduitComponent } from './components/ajouter-produit/ajouter-produit.component';
 import { ModifierProduitComponent } from './components/modifier-produit/modifier-produit.component';
-import { SuprimerProduitComponent } from './components/suprimer-produit/suprimer-produit.component';
 import { provideHttpClient } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+];
 @NgModule({
   declarations: [
     AppComponent,
     ListeProduitsComponent,
     AjouterProduitComponent,
     ModifierProduitComponent,
-    SuprimerProduitComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     FormsModule,
     AppRoutingModule
   ],
