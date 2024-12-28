@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mssqldb:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    container_name: mssqlserver
+    restart: always
+    hostname: mssqldb
+    environment:
+      SA_PASSWORD: Password123456789
+      ACCEPT_EULA: Y
+    ports:
+      - 9595:1433
+
+ 
