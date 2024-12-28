@@ -38,7 +38,9 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 echo "Start add Entity Framework Core Design..."
 sleep 15
 dotnet add package Microsoft.EntityFrameworkCore.Design
-
+echo "Check to verify the packages have been added for can't have error..."
+sleep 15
+dotnet tool install --global dotnet-ef
 
 # Run the database migrations
 echo "Running database migrations..."
