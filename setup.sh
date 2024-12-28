@@ -21,6 +21,25 @@ docker cp ./OwlCreate.sql mssqlserver:/OwlCreate.sql
 echo "Installing sqlcmd and running database setup..."
 docker exec mssqlserver /bin/bash -c "/opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P 'Password123456789' -d master -i /OwlCreate.sql -C"
 
+# Add Package Entity framework to the project
+echo "Add a dotnet ef package to the project..."
+cd MonApiRestful
+dotnet add package Microsoft.EntityFrameworkCore
+sleep 200
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+sleep 200
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+sleep 200
+dotnet add package Microsoft.EntityFrameworkCore.Design
+sleep 200
+
+# Run the database migrations
+echo "Running database migrations..."
+dotnet ef migrations add InitialCreate3
+sleep 50
+dotnet ef database update
+sleep 100
+
 echo "Database setup complete."
 
 # Run tests in the .NET project
@@ -28,5 +47,12 @@ echo "Running tests in TestProject2..."
 cd MonapiTests
 dotnet test
 
+echo "Installing npm pakages form to execute the angular project..."
+cd /MyAPIRestful/gestion-produits
+npm install -g @angular/cli
+sleep 100
+npm install @angular/core
+sleep 100
+
 echo "All tasks completed successfully."
-echo "You can now run 'dotnet test' to test the application."
+echo "You can now run the API back-end and Angular front-end projects. You can use dotnet run and ng serve respectively."
