@@ -55,7 +55,7 @@ echo "Database setup complete."
 
 # Run tests in the .NET project
 echo "Running tests in TestProject2..."
-cd MonApiTests
+cd /workspaces/MyAPIRestful/MonApiTests
 dotnet test
 
 echo "Installing npm pakages form to execute the angular project..."
