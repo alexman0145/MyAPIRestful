@@ -23,22 +23,31 @@ docker exec mssqlserver /bin/bash -c "/opt/mssql-tools18/bin/sqlcmd -S localhost
 
 # Add Package Entity framework to the project
 echo "Add a dotnet ef package to the project..."
+sleep 15
 cd MonApiRestful
+echo "Adding Entity Framework packages to the project..."
+echo "Start add Entity Framework Core..."
+sleep 15
 dotnet add package Microsoft.EntityFrameworkCore
-sleep 200
+echo "Start add Entity Framework Core SQL Server..."
+sleep 15
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-sleep 200
+echo "Start add Entity Framework Core Tools..."
+sleep 15
 dotnet add package Microsoft.EntityFrameworkCore.Tools
-sleep 200
+echo "Start add Entity Framework Core Design..."
+sleep 15
 dotnet add package Microsoft.EntityFrameworkCore.Design
-sleep 200
+
 
 # Run the database migrations
 echo "Running database migrations..."
+sleep 15
 dotnet ef migrations add InitialCreate3
-sleep 50
+echo "Udpate migration..."
+sleep 15
 dotnet ef database update
-sleep 100
+
 
 echo "Database setup complete."
 
@@ -48,11 +57,11 @@ cd MonapiTests
 dotnet test
 
 echo "Installing npm pakages form to execute the angular project..."
+sleep 15
 cd /MyAPIRestful/gestion-produits
 npm install -g @angular/cli
-sleep 100
 npm install @angular/core
-sleep 100
+
 
 echo "All tasks completed successfully."
 echo "You can now run the API back-end and Angular front-end projects. You can use dotnet run and ng serve respectively."
