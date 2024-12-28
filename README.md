@@ -37,9 +37,9 @@ You can use an extension mssql (server) in vscode or use software DBeaver
 
 ## Step for vscode
 
-Install the extension name ```SQL Server (mssql) ``` after waiting
+Install the extension name ```SQL Server (mssql) ``` 
 
-An icone of type server is add click top
+after waiting an icone of type server is add click top
 
 Click to the button "+"
 
