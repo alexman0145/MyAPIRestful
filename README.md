@@ -13,6 +13,15 @@ This repos like mentionned use to create to products just for fun ;).
 
 ## step 1 :
 
+If you start a codespace, Check a script a setup.sh is present.
+
+Insert this commande
+
+```bash setup.sh```
+
+
+
+
 
 
 
