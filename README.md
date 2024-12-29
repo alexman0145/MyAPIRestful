@@ -5,7 +5,7 @@ Note : If you have french go to the README French.md for have a version french
 If you recommanded of start a Codespace for to use a repos, make you sure than you be in the auto branch.
 This repos like mentionned use to create to products just for fun ;).
 
-- You have at to disposition a 2 projects and a database :
+- You have at to disposition 2 projects and a database :
 
 - A project of type back-end wich can use a manage of data and the API, it is a type of Resful
 
