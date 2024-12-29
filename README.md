@@ -9,7 +9,7 @@ This repos like mentionned use to create to products just for fun ;).
 
 - A project of type back-end wich can use a manage of data and the API, it is a type of Resful
 
-- A project of type front-end for the graphical interface wich use framework a Angular (For more information for this framework go to <a href="https://angular.dev/overview">https://angular.dev/overview)</a>.
+- A project of type front-end for the web graphical interface wich use framework a Angular (For more information for this framework go to <a href="https://angular.dev/overview">https://angular.dev/overview)</a>.
 
 ## step 1 :
 
@@ -91,6 +91,8 @@ Congraluations your database work
 
 ![image](https://github.com/user-attachments/assets/be3f6aff-2f2c-4d0e-b5a9-a16ff4b4804d)
 
+Step DBeaver :
+
 If you would like use DBeaver
 
 Start a softaware DBeaver
@@ -115,7 +117,7 @@ Congraluations the database work
 
 ## Step 3
 
-You can run this command for start the API back end from the API restful
+You can run this command for start the API back end
 
 ``` bash
 cd MonApiRestful
@@ -139,7 +141,7 @@ info: Microsoft.Hosting.Lifetime[0]
 
 In the Browser anter this URL and add ```/swagger``` for access at swagger
 
-You can now add, check, update and delete the produit 
+You can now add, check, update and delete a product
 
 ![image](https://github.com/user-attachments/assets/54d77b95-ec08-415a-ae54-719987dc4a92)
 
@@ -175,7 +177,7 @@ SELECT * FROM Price2
 ```
 Or use the API to check the product with method ``` GET ```
 
-For rename a product you can do process like method ``` POST ``` ensure that the ID than you use is good and Check the Database if work
+For rename a product you can do process like method ``` PUT ``` ensure that the ID than you use is good and Check the Database if work
 
 ## Step 4 :
 
@@ -195,11 +197,11 @@ Congraluations you can use the front end from the URL <a href="http://localhost:
 
 ![image](https://github.com/user-attachments/assets/cab0fc7e-ed49-4f16-a5da-cead1bf5b72f)
 
-add a next URL /ajouter for add a products or modifier/:id for edit the product
+add after '/' ```/ajouter ``` for add a products or ``` modifier/:id ``` for edit the product
 
 In this URL ``` http://127.0.0.1:4200/produits ``` the list of procuts appear in this page.
 
-
+Enjoy it :)
 
 
 
